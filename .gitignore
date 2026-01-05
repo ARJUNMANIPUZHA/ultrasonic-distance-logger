@@ -1,0 +1,19 @@
+# Kernel build artifacts
+*.o
+*.ko
+*.mod*
+*.symvers
+*.order
+*.cmd
+.tmp_versions/
+
+# Device tree blobs
+*.dtbo
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# Logs
+*.log

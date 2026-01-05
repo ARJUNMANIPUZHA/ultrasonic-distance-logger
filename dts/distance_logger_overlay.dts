@@ -1,0 +1,64 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "brcm,bcm2711";
+
+    /* ---------- Ultrasonic Sensor ---------- */
+    fragment@0 {
+        target-path = "/";
+        __overlay__ {
+            ultrasonic {
+                compatible = "custom,hcsr04";
+                trig-gpios = <&gpio 23 0>;
+                echo-gpios = <&gpio 24 0>;
+                status = "okay";
+            };
+        };
+    };
+
+    /* ---------- I2C EEPROM ---------- */
+    fragment@1 {
+        target = <&i2c1>;
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <0>;
+
+            eeprom@50 {
+                compatible = "custom,eeprom-logger";
+                reg = <0x50>;
+                page-size = <8>;
+                size-bytes = <256>;
+                status = "okay";
+            };
+        };
+    };
+
+    /* ---------- Push Button ---------- */
+    fragment@2 {
+        target-path = "/";
+        __overlay__ {
+            distance_button {
+                compatible = "custom,distance-button";
+                button-gpios = <&gpio 17 1>; /* active low */
+                status = "okay";
+            };
+        };
+    };
+
+    /* ---------- I2C OLED ---------- */
+    fragment@3 {
+        target = <&i2c1>;
+        __overlay__ {
+            #address-cells = <1>;
+            #size-cells = <0>;
+
+            oled@3c {
+                compatible = "custom,sh1106-oled";
+                reg = <0x3c>;
+                status = "okay";
+            };
+        };
+    };
+};
+
