@@ -20,9 +20,9 @@ The measured distance is:
   * Raspberry Pi 4 Model B 
   * HC-SR04 Ultrasonic Sensor
   * Push Button 
-  * I2C EEPROM (k24c256)
-  * I2C OLED (sh1106)
-  * 
+  * I2C EEPROM (K24C256)
+  * I2C OLED (SH1106)
+    
 ## How It Works
   1. Button press triggers a GPIO interrupt
   2. IRQ handler schedules work using `schedule_work()`
