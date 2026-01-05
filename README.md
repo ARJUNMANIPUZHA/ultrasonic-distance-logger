@@ -17,11 +17,11 @@ The measured distance is:
   * Device Tree based hardware configuration
 
 ## Hardware Use
-  * Raspberry Pi (BCM2711)
+  * Raspberry Pi 4 Model B 
   * HC-SR04 Ultrasonic Sensor
-  * Push Button (active-low)
-  * I2C EEPROM (0x50)
-  * I2C OLED (0x3C)
+  * Push Button 
+  * I2C EEPROM (k24c256)
+  * I2C OLED (sh1106)
   * 
 ## How It Works
   1. Button press triggers a GPIO interrupt
@@ -58,12 +58,19 @@ sudo insmod distance_logger.ko
 ```
 ## Kernel Concepts Used
 
+## Kernel Concepts Used
+
 * Character device drivers
-* GPIO interrupts
-* Workqueues
-* Device Tree
-* I2C drivers
-* Kernel timing and synchronization
+* GPIO handling 
+* GPIO interrupts (IRQ handling)
+* Top-half / bottom-half separation
+* Workqueues 
+* Device Tree based hardware description and driver binding
+* Platform drivers 
+* I2C drivers 
+* Sysfs interface for exposing EEPROM log data
+* Kernel timing APIs
+* Synchronization mechanisms (mutexes, completions)
 
 ## Project Demo
 
