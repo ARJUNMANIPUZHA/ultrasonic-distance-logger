@@ -65,8 +65,12 @@ sudo insmod distance_logger.ko
 * I2C drivers
 * Kernel timing and synchronization
 
-Demo : 
-https://youtu.be/JToF8V5raUw?si=COt8OYYojzjY4xW4
+## Project Demo
+
+Click the image below to watch the demo video:
+
+[![Ultrasonic Distance Logger Demo](https://img.youtube.com/vi/JToF8V5raUw/0.jpg)](https://youtu.be/JToF8V5raUw)
+
 
 
 
