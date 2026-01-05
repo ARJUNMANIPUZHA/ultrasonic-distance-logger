@@ -58,8 +58,6 @@ sudo insmod distance_logger.ko
 ```
 ## Kernel Concepts Used
 
-## Kernel Concepts Used
-
 * Character device drivers
 * GPIO handling 
 * GPIO interrupts (IRQ handling)
