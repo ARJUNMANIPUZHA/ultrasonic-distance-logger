@@ -1,6 +1,3 @@
-# Ultrasonic Distance Logger – Linux Device Driver
-https://youtu.be/JToF8V5raUw?si=COt8OYYojzjY4xW4
-
 # Ultrasonic Distance Logger
 
 ## Overview
@@ -9,7 +6,7 @@ This project implements a Linux kernel driver–based distance logging system on
 An external push button triggers an ultrasonic distance measurement. 
 The measured distance is:
   * displayed on an I2C OLED
-  * stored persistently in an I2C EEPROM, (Only the last 10 values are stored using a circular buffer. The data remains available even after reboot)
+  * stored persistently in an I2C EEPROM (Only the last 10 values are stored using a circular buffer. The data remains available even after reboot)
 
 ## Key Features
   * Button-triggered ultrasonic measurement (no polling)
@@ -34,6 +31,7 @@ The measured distance is:
   5. Distance is stored in EEPROM
 
 ## Project Structure
+```
 ├── dts
 │   └── distance_logger_overlay.dts
 ├── kernel
@@ -45,6 +43,7 @@ The measured distance is:
 │   └── ultrasonic_driver.c
 ├── Makefile
 └── README.md
+```
 
 ## EEPROM Log
 Read stored values using:
@@ -70,5 +69,5 @@ Demo :
 https://youtu.be/JToF8V5raUw?si=COt8OYYojzjY4xW4
 
 
-Just tell me 👍
+
 
