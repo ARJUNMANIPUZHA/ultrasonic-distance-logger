@@ -68,7 +68,7 @@ sudo insmod distance_logger.ko
 * I2C drivers 
 * Sysfs interface for exposing EEPROM log data
 * Kernel timing APIs
-* Synchronization mechanisms (mutexes, completions)
+* Synchronization mechanisms 
 
 ## Project Demo
 
