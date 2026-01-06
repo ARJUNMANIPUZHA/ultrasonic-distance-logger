@@ -6,13 +6,13 @@ This project implements a Linux kernel driver–based distance logging system on
 An external push button triggers an ultrasonic distance measurement. 
 The measured distance is:
   * displayed on an I2C OLED
-  * stored persistently in an I2C EEPROM (Only the last 10 values are stored using a circular buffer. The data remains available even after reboot)
+  * stored in an I2C EEPROM (Only the last 10 values are stored using a circular buffer. The data remains available even after reboot)
 
 ## Key Features
-  * Button-triggered ultrasonic measurement (no polling)
+  * Button-triggered ultrasonic measurement
   * GPIO interrupt with deferred processing using workqueue
   * Distance display on I2C OLED
-  * Persistent EEPROM logging (circular buffer)
+  * EEPROM logging (circular buffer)
   * Character device `/dev/distance_logger`
   * Device Tree based hardware configuration
 
